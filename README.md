@@ -11,3 +11,8 @@ The primary business objectives are:
 1. Efficient Article Classification – Automate the categorization of journal articles to streamline editorial workflows.
 2. Improved Discoverability – Enhance search and retrieval of articles by discipline for researchers and readers.
 3. Reduced Manual Effort – Minimize the need for manual tagging by editors, reducing human error and workload.
+
+## Success Criteria
+* The model should correctly classify articles into predefined disciplines with high accuracy.
+* The solution should be scalable to handle new articles as the journal continues publishing.
+* The classification system should be interpretable, allowing editors to verify and adjust categories if needed.
