@@ -16,3 +16,10 @@ The primary business objectives are:
 * The model should correctly classify articles into predefined disciplines with high accuracy.
 * The solution should be scalable to handle new articles as the journal continues publishing.
 * The classification system should be interpretable, allowing editors to verify and adjust categories if needed.
+
+## Data Mining Goals
+
+* Text Preprocessing – Clean and preprocess article titles and abstracts (tokenization, stopword removal, stemming/lemmatization).
+* Feature Extraction – Convert text into numerical features using techniques like TF-IDF or word embeddings (Word2Vec, GloVe).
+* Model Development – Implement a supervised classification model (e.g., Naïve Bayes, SVM, Random Forest, or Neural Networks) to predict article disciplines.
+* Evaluation – Assess model performance using metrics such as accuracy, precision, recall, and F1-score.
