@@ -23,3 +23,9 @@ The primary business objectives are:
 * Feature Extraction – Convert text into numerical features using techniques like TF-IDF or word embeddings (Word2Vec, GloVe).
 * Model Development – Implement a supervised classification model (e.g., Naïve Bayes, SVM, Random Forest, or Neural Networks) to predict article disciplines.
 * Evaluation – Assess model performance using metrics such as accuracy, precision, recall, and F1-score.
+
+## Initial Project Success Criteria
+
+* Accuracy: The model should achieve at least 85% accuracy in classifying articles into the correct discipline.
+* Interpretability: The model should provide explainable predictions (e.g., feature importance in decision-making).
+* Scalability: The solution should handle new, unseen articles without significant performance degradation.
