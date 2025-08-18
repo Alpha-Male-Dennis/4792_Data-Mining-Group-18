@@ -43,5 +43,5 @@ The columns have the following data types: article_id, title, abstract, keywords
 ### Data Initial Exploration:
 
 The distribution of articles by discipline shows that "Engineering" has the highest number of articles, followed by "Environmental Science" and "Agriculture".
-The top 20 most frequent words in the abstracts (excluding stopwords) include terms like "study", "data", "water", "mining", and "construction", which align with the prominent disciplines in the dataset.
+The 20 most frequent words in the abstracts after removing stopwords include terms such as study, data, water, mining, and construction, which reflect the major disciplines represented in the dataset.
 
