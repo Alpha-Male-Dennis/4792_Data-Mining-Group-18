@@ -29,3 +29,13 @@ The primary business objectives are:
 * Accuracy: The model should achieve at least 85% accuracy in classifying articles into the correct discipline.
 * Interpretability: The model should provide explainable predictions (e.g., feature importance in decision-making).
 * Scalability: The solution should handle new, unseen articles without significant performance degradation.
+
+# 2. Data Understanding
+
+## Initial Findings Summary
+
+### Data Loading and Description:
+
+The dataset, journal_articles_final.csv, was successfully loaded into a pandas DataFrame named df.
+The dataset contains 47 articles and 7 columns: article_id, title, abstract, keywords, discipline, year, and volume.
+The columns have the following data types: article_id, title, abstract, keywords, and discipline are objects (strings), while year and volume are integers.
