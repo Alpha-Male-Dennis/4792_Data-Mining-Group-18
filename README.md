@@ -40,8 +40,14 @@ The dataset, journal_articles_final.csv, was successfully loaded into a pandas D
 The dataset contains 47 articles and 7 columns: article_id, title, abstract, keywords, discipline, year, and volume.
 The columns have the following data types: article_id, title, abstract, keywords, and discipline are objects (strings), while year and volume are integers.
 
+
 ### Data Initial Exploration:
 
 The distribution of articles by discipline shows that "Engineering" has the highest number of articles, followed by "Environmental Science" and "Agriculture".
 The top 20 most frequent words in the abstracts (excluding stopwords) include terms like "study", "data", "water", "mining", and "construction", which align with the prominent disciplines in the dataset.
+
+### Data Quality Verification:
+There are missing values in the abstract (2 missing) and keywords (5 missing) columns. There are no duplicate articles based on the combination of 'title' and 'abstract'
+
+
 
