@@ -48,6 +48,20 @@ The top 20 most frequent words in the abstracts (excluding stopwords) include te
 
 ### Data Quality Verification:
 There are missing values in the abstract (2 missing) and keywords (5 missing) columns. There are no duplicate articles based on the combination of 'title' and 'abstract'
+# 3. Data Preparation
 
+This phase of the project focused on preparing the raw journal article data for machine learning model development. The key steps involved:
 
+**Data Cleaning:**
+  *   Addressed missing values, specifically in the 'keywords' column, by filling them with empty strings.
+  *   Checked for and confirmed the absence of duplicate articles based on title and abstract.
+
+**Feature Engineering:**
+
+  *   Created a new feature, 'CombinedText', by concatenating the cleaned 'title', 'abstract', and 'keywords' columns. This provides a comprehensive text representation for each article.
+
+**Data Transformation:**
+    *   Converted the categorical 'discipline' labels into a numerical format using One-Hot Encoding, which is necessary for most machine learning algorithms.
+    *   Transformed the 'CombinedText' into a numerical representation using the Bag-of-Words model. This vectorization process allows the text data to be used as input for classification models.
+Each step was clearly documented within the notebook, explaining the rationale behind the data cleaning, feature engineering, and transformation decisions.
 
