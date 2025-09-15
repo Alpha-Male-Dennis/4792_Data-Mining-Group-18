@@ -65,3 +65,35 @@ This phase of the project focused on preparing the raw journal article data for 
     *   Transformed the 'CombinedText' into a numerical representation using the Bag-of-Words model. This vectorization process allows the text data to be used as input for classification models.
 Each step was clearly documented within the notebook, explaining the rationale behind the data cleaning, feature engineering, and transformation decisions.
 
+# 4. Modeling
+
+This phase focused on experimenting with different machine learning algorithms to classify articles into disciplines based on their titles and abstracts.
+
+## Algorithm Selection
+Three models were chosen for comparison:
+1. **Random Forest Classifier** – robust to overfitting, handles high-dimensional embeddings well.
+2. **Support Vector Machine (SVM)** – effective in high-dimensional spaces, good for text embeddings.
+3. **Logistic Regression** – a strong baseline, efficient, and interpretable.
+
+## Data Preparation for Modeling
+- Used **Sentence-BERT (all-MiniLM-L6-v2)** embeddings (384 dimensions) for text representation.  
+- Combined article **title + abstract** to form the input feature text.  
+- Encoded discipline labels using **LabelEncoder**.  
+- Training/testing split: **34 training samples (75%)**, **12 test samples (25%)**.  
+
+## Model Training
+- Applied `class_weight='balanced'` to handle class imbalance.  
+- Used **Leave-One-Out Cross-Validation (LOOCV)** for reliable evaluation on the small dataset.  
+- Configurations:  
+  - Random Forest: limited depth (`max_depth=5`) to avoid overfitting.  
+  - SVM: linear kernel, probability enabled.  
+  - Logistic Regression: `max_iter=1000` for convergence.  
+
+## Initial Results (LOOCV Accuracy)
+- Random Forest: **14.7%**  
+- SVM: **26.5%**  
+- Logistic Regression: **32.4%**  
+
+Logistic Regression showed the best stability and performance during training.
+
+---
