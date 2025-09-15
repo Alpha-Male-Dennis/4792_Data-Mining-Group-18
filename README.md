@@ -119,15 +119,14 @@ The models were evaluated on the **12 held-out test samples** using accuracy, pr
 ---
 
 # 6. Deployment
-
 ## Final Model Selection
-- **Chosen Model:** Logistic Regression  
+- **Chosen Model:** Support Vector Machine (SVM)  
 - **Reasons:**  
-  - Best LOOCV accuracy (32.4%)  
-  - Computationally efficient  
-  - Provides probability estimates (interpretable)  
-  - More stable on small datasets  
-
+  - Best test accuracy (58.3%)  
+  - More robust than Random Forest & Logistic Regression  
+  - Handles high-dimensional embeddings effectively  
+  - Balanced trade-off between accuracy and overfitting risk
+  - 
 ## Deployment Approach
 - Built a **Command-Line Interface (CLI) tool** for prediction.  
 - **User Flow:**  
