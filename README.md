@@ -97,3 +97,68 @@ Three models were chosen for comparison:
 Logistic Regression showed the best stability and performance during training.
 
 ---
+
+# 5. Evaluation
+
+The models were evaluated on the **12 held-out test samples** using accuracy, precision, recall, F1-score, and confusion matrices.
+
+## Results Summary
+
+| Model                | Accuracy | Key Strength | Key Weakness |
+|-----------------------|----------|--------------|--------------|
+| Random Forest         | 25.0%    | Moderate precision for Mining Eng. | Failed on 7/8 classes |
+| SVM                   | 58.3%    | Best overall; strong recall for Mining Eng. & Con. Mgmt. | Failed on 4/6 classes |
+| Logistic Regression   | 33.3%    | Perfect precision for Mining Eng. | Failed on 7/8 classes |
+
+### Key Observations
+- **SVM performed best (58.3% accuracy)** but only predicted a few classes successfully.  
+- **Random Forest** and **Logistic Regression** were dominated by the *Mining Engineering* class.  
+- For most disciplines, metrics = **0.00** (no correct predictions).  
+- This reflects **severe data scarcity and imbalance**.  
+
+---
+
+# 6. Deployment
+
+## Final Model Selection
+- **Chosen Model:** Logistic Regression  
+- **Reasons:**  
+  - Best LOOCV accuracy (32.4%)  
+  - Computationally efficient  
+  - Provides probability estimates (interpretable)  
+  - More stable on small datasets  
+
+## Deployment Approach
+- Built a **Command-Line Interface (CLI) tool** for prediction.  
+- **User Flow:**  
+  1. Run the application.  
+  2. Enter article title and abstract.  
+  3. Model predicts and displays discipline.  
+  4. User can continue or exit.  
+
+This provides a lightweight, practical demonstration of how the classifier can be integrated into editorial workflows.
+
+---
+
+# 7. Conclusion and Recommendations
+
+## Conclusion
+- The project demonstrated an **end-to-end CRISP-DM workflow** for academic paper classification.  
+- However, the models **did not meet the success criteria** (70% accuracy).  
+- The best model (SVM) achieved **58.3%**, but mainly by predicting one dominant class.  
+- Key limiting factors:  
+  - **Tiny dataset (46 samples)**  
+  - **Severe class imbalance**  
+  - **High-dimensional embeddings with few samples**  
+
+## Recommendations
+1. **Acquire More Data** – essential for reliable classification (dozens/hundreds of samples per class).  
+2. **Reduce Class Complexity** – group similar disciplines into broader categories.  
+3. **Handle Class Imbalance** – use oversampling (SMOTE), undersampling, or class weights.  
+4. **Improve Features** – explore fine-tuned domain-specific embeddings.  
+5. **Future Deployment** – expand from CLI tool to web app or API once model performance improves.  
+
+---
+
+This project highlights the **importance of data quantity and balance** in text classification.  
+While the models struggled due to dataset limitations, the framework is in place: with more data, the approach can scale into a practical, automated classification system for JONAS.
